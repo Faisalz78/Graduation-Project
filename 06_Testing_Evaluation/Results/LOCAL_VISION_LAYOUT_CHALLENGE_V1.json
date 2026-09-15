@@ -1,0 +1,109 @@
+{
+  "synthetic_only": true,
+  "development_challenge": true,
+  "not_real_world_accuracy": true,
+  "documents": [
+    {
+      "file": "anonymous-layout.pdf",
+      "baseline": {
+        "header_correct": 1,
+        "header_expected": 7,
+        "item_fields_correct": 0,
+        "item_fields_expected": 10,
+        "predicted_rows": 0,
+        "invented_discount": false,
+        "seconds": 0.36,
+        "local_understanding": null
+      },
+      "local": {
+        "header_correct": 7,
+        "header_expected": 7,
+        "item_fields_correct": 10,
+        "item_fields_expected": 10,
+        "predicted_rows": 2,
+        "invented_discount": false,
+        "seconds": 9.909,
+        "local_understanding": {
+          "model": "qwen3-vl:8b-instruct",
+          "version": "grounded-local-vision-v1",
+          "status": "COMPLETED",
+          "pages": 1,
+          "added_fields": 6,
+          "confirmed_fields": 1,
+          "added_rows": 2,
+          "conflicts": 0,
+          "rejected_values": 0,
+          "seconds": 9.734
+        }
+      }
+    },
+    {
+      "file": "anonymous-layout.png",
+      "baseline": {
+        "header_correct": 1,
+        "header_expected": 7,
+        "item_fields_correct": 0,
+        "item_fields_expected": 10,
+        "predicted_rows": 0,
+        "invented_discount": false,
+        "seconds": 8.69,
+        "local_understanding": null
+      },
+      "local": {
+        "header_correct": 7,
+        "header_expected": 7,
+        "item_fields_correct": 10,
+        "item_fields_expected": 10,
+        "predicted_rows": 2,
+        "invented_discount": false,
+        "seconds": 14.322,
+        "local_understanding": {
+          "model": "qwen3-vl:8b-instruct",
+          "version": "grounded-local-vision-v1",
+          "status": "COMPLETED",
+          "pages": 1,
+          "added_fields": 6,
+          "confirmed_fields": 1,
+          "added_rows": 2,
+          "conflicts": 0,
+          "rejected_values": 0,
+          "seconds": 7.893
+        }
+      }
+    },
+    {
+      "file": "anonymous-camera.jpg",
+      "baseline": {
+        "header_correct": 1,
+        "header_expected": 7,
+        "item_fields_correct": 0,
+        "item_fields_expected": 10,
+        "predicted_rows": 0,
+        "invented_discount": false,
+        "seconds": 7.456,
+        "local_understanding": null
+      },
+      "local": {
+        "header_correct": 7,
+        "header_expected": 7,
+        "item_fields_correct": 10,
+        "item_fields_expected": 10,
+        "predicted_rows": 2,
+        "invented_discount": false,
+        "seconds": 16.159,
+        "local_understanding": {
+          "model": "qwen3-vl:8b-instruct",
+          "version": "grounded-local-vision-v1",
+          "status": "COMPLETED",
+          "pages": 1,
+          "added_fields": 6,
+          "confirmed_fields": 1,
+          "added_rows": 2,
+          "conflicts": 0,
+          "rejected_values": 0,
+          "seconds": 9.153
+        }
+      }
+    }
+  ]
+}

@@ -1,0 +1,280 @@
+{
+  "benchmark_version": 1,
+  "parser_version": "labels-and-columns-v4",
+  "reader_versions": [
+    "pymupdf-paddle-hybrid-v5"
+  ],
+  "synthetic_only": true,
+  "not_real_world_accuracy": true,
+  "split_note": "Four image perturbations of known synthetic family 02. Fresh image conditions, not independent invoices or an unseen layout; no real-world accuracy claim.",
+  "comparison": "Strict field equality after Unicode/space/digit normalization; exact Decimal comparison for amounts. Items compared in printed order. Missing predictions and failures count as incorrect. OCR confidence is not calibrated field accuracy.",
+  "environment": {
+    "platform": "Windows-11-10.0.26200-SP0",
+    "python": "3.13.3",
+    "paddleocr": "3.7.0",
+    "paddlepaddle": "3.3.1",
+    "paddlex": "3.7.2",
+    "PyMuPDF": "1.28.2",
+    "pypdfium2": "5.13.0"
+  },
+  "groups": {
+    "all": {
+      "documents": 4,
+      "header_correct": 26,
+      "header_expected": 28,
+      "item_fields_correct": 38,
+      "item_fields_expected": 40,
+      "rows_expected": 8,
+      "rows_predicted": 8,
+      "rows_exact": 6,
+      "failures": 0,
+      "seconds": 39.663
+    },
+    "ar": {
+      "documents": 2,
+      "header_correct": 12,
+      "header_expected": 14,
+      "item_fields_correct": 18,
+      "item_fields_expected": 20,
+      "rows_expected": 4,
+      "rows_predicted": 4,
+      "rows_exact": 2,
+      "failures": 0,
+      "seconds": 21.419
+    },
+    "image": {
+      "documents": 4,
+      "header_correct": 26,
+      "header_expected": 28,
+      "item_fields_correct": 38,
+      "item_fields_expected": 40,
+      "rows_expected": 8,
+      "rows_predicted": 8,
+      "rows_exact": 6,
+      "failures": 0,
+      "seconds": 39.663
+    },
+    "stress": {
+      "documents": 4,
+      "header_correct": 26,
+      "header_expected": 28,
+      "item_fields_correct": 38,
+      "item_fields_expected": 40,
+      "rows_expected": 8,
+      "rows_predicted": 8,
+      "rows_exact": 6,
+      "failures": 0,
+      "seconds": 39.663
+    },
+    "ar/image": {
+      "documents": 2,
+      "header_correct": 12,
+      "header_expected": 14,
+      "item_fields_correct": 18,
+      "item_fields_expected": 20,
+      "rows_expected": 4,
+      "rows_predicted": 4,
+      "rows_exact": 2,
+      "failures": 0,
+      "seconds": 21.419
+    },
+    "en": {
+      "documents": 2,
+      "header_correct": 14,
+      "header_expected": 14,
+      "item_fields_correct": 20,
+      "item_fields_expected": 20,
+      "rows_expected": 4,
+      "rows_predicted": 4,
+      "rows_exact": 4,
+      "failures": 0,
+      "seconds": 18.244
+    },
+    "en/image": {
+      "documents": 2,
+      "header_correct": 14,
+      "header_expected": 14,
+      "item_fields_correct": 20,
+      "item_fields_expected": 20,
+      "rows_expected": 4,
+      "rows_predicted": 4,
+      "rows_exact": 4,
+      "failures": 0,
+      "seconds": 18.244
+    }
+  },
+  "documents": [
+    {
+      "id": "ar-rotated-jpeg",
+      "sha256": "e3220d71249b761420fff1d88e7de307a44ed5b509499cd9d6b020d2872541c0",
+      "split": "stress",
+      "reader_version": "pymupdf-paddle-hybrid-v5",
+      "header_checks": {
+        "supplier_name": true,
+        "invoice_number": true,
+        "invoice_date": true,
+        "currency": true,
+        "subtotal": true,
+        "tax_total": true,
+        "grand_total": true
+      },
+      "item_checks": [
+        {
+          "description": true,
+          "quantity": true,
+          "unit_price": true,
+          "discount_amount": true,
+          "tax_rate": true
+        },
+        {
+          "description": true,
+          "quantity": true,
+          "unit_price": true,
+          "discount_amount": true,
+          "tax_rate": true
+        }
+      ],
+      "documents": 1,
+      "header_correct": 7,
+      "header_expected": 7,
+      "item_fields_correct": 10,
+      "item_fields_expected": 10,
+      "rows_expected": 2,
+      "rows_predicted": 2,
+      "rows_exact": 2,
+      "failures": 0,
+      "seconds": 15.951,
+      "process_peak_rss_mb": 2587.3,
+      "error": null
+    },
+    {
+      "id": "ar-small-jpeg",
+      "sha256": "20da31ff023b6de1f7f80efc5a1bada786d74475f00528b99c02b145e14edbeb",
+      "split": "stress",
+      "reader_version": "pymupdf-paddle-hybrid-v5",
+      "header_checks": {
+        "supplier_name": false,
+        "invoice_number": true,
+        "invoice_date": true,
+        "currency": false,
+        "subtotal": true,
+        "tax_total": true,
+        "grand_total": true
+      },
+      "item_checks": [
+        {
+          "description": false,
+          "quantity": true,
+          "unit_price": true,
+          "discount_amount": true,
+          "tax_rate": true
+        },
+        {
+          "description": false,
+          "quantity": true,
+          "unit_price": true,
+          "discount_amount": true,
+          "tax_rate": true
+        }
+      ],
+      "documents": 1,
+      "header_correct": 5,
+      "header_expected": 7,
+      "item_fields_correct": 8,
+      "item_fields_expected": 10,
+      "rows_expected": 2,
+      "rows_predicted": 2,
+      "rows_exact": 0,
+      "failures": 0,
+      "seconds": 5.468,
+      "process_peak_rss_mb": 2587.3,
+      "error": null
+    },
+    {
+      "id": "en-rotated-jpeg",
+      "sha256": "35443b504988051d6055119800ec1611d92d66dac5ea0839ab6911b1afab6eae",
+      "split": "stress",
+      "reader_version": "pymupdf-paddle-hybrid-v5",
+      "header_checks": {
+        "supplier_name": true,
+        "invoice_number": true,
+        "invoice_date": true,
+        "currency": true,
+        "subtotal": true,
+        "tax_total": true,
+        "grand_total": true
+      },
+      "item_checks": [
+        {
+          "description": true,
+          "quantity": true,
+          "unit_price": true,
+          "discount_amount": true,
+          "tax_rate": true
+        },
+        {
+          "description": true,
+          "quantity": true,
+          "unit_price": true,
+          "discount_amount": true,
+          "tax_rate": true
+        }
+      ],
+      "documents": 1,
+      "header_correct": 7,
+      "header_expected": 7,
+      "item_fields_correct": 10,
+      "item_fields_expected": 10,
+      "rows_expected": 2,
+      "rows_predicted": 2,
+      "rows_exact": 2,
+      "failures": 0,
+      "seconds": 12.621,
+      "process_peak_rss_mb": 2749.2,
+      "error": null
+    },
+    {
+      "id": "en-small-jpeg",
+      "sha256": "7cc4b67b4080fbdba3e0883efd92eaa0931a2aa743ce125d572cfad2a52d9c87",
+      "split": "stress",
+      "reader_version": "pymupdf-paddle-hybrid-v5",
+      "header_checks": {
+        "supplier_name": true,
+        "invoice_number": true,
+        "invoice_date": true,
+        "currency": true,
+        "subtotal": true,
+        "tax_total": true,
+        "grand_total": true
+      },
+      "item_checks": [
+        {
+          "description": true,
+          "quantity": true,
+          "unit_price": true,
+          "discount_amount": true,
+          "tax_rate": true
+        },
+        {
+          "description": true,
+          "quantity": true,
+          "unit_price": true,
+          "discount_amount": true,
+          "tax_rate": true
+        }
+      ],
+      "documents": 1,
+      "header_correct": 7,
+      "header_expected": 7,
+      "item_fields_correct": 10,
+      "item_fields_expected": 10,
+      "rows_expected": 2,
+      "rows_predicted": 2,
+      "rows_exact": 2,
+      "failures": 0,
+      "seconds": 5.623,
+      "process_peak_rss_mb": 2749.2,
+      "error": null
+    }
+  ]
+}

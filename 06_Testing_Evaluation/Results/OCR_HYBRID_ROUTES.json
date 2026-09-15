@@ -1,0 +1,102 @@
+{
+  "synthetic_only": true,
+  "independent_evaluation": false,
+  "note": "PDF wrappers of the existing regression samples; mixed.pdf intentionally combines two sample invoices to test conflicting headers and page routing.",
+  "reader_version": "pymupdf-paddle-hybrid-v4",
+  "results": [
+    {
+      "document": "ar-scanned.pdf",
+      "routes": [
+        {
+          "page": 1,
+          "method": "OCR",
+          "reason": "MAINLY_SCANNED",
+          "image_coverage": 0.9997
+        }
+      ],
+      "header_checks": {
+        "supplier_name": true,
+        "invoice_number": true,
+        "invoice_date": true,
+        "currency": true,
+        "subtotal": true,
+        "tax_total": true,
+        "grand_total": true
+      },
+      "item_checks": [
+        {
+          "description": true,
+          "quantity": true,
+          "unit_price": true,
+          "discount_amount": true,
+          "tax_rate": true
+        },
+        {
+          "description": true,
+          "quantity": true,
+          "unit_price": true,
+          "discount_amount": true,
+          "tax_rate": true
+        }
+      ],
+      "seconds": 10.931
+    },
+    {
+      "document": "en-scanned.pdf",
+      "routes": [
+        {
+          "page": 1,
+          "method": "OCR",
+          "reason": "MAINLY_SCANNED",
+          "image_coverage": 0.9997
+        }
+      ],
+      "header_checks": {
+        "supplier_name": true,
+        "invoice_number": true,
+        "invoice_date": true,
+        "currency": true,
+        "subtotal": true,
+        "tax_total": true,
+        "grand_total": true
+      },
+      "item_checks": [
+        {
+          "description": true,
+          "quantity": true,
+          "unit_price": true,
+          "discount_amount": true,
+          "tax_rate": true
+        },
+        {
+          "description": true,
+          "quantity": true,
+          "unit_price": true,
+          "discount_amount": true,
+          "tax_rate": true
+        }
+      ],
+      "seconds": 8.258
+    },
+    {
+      "document": "mixed.pdf",
+      "routes": [
+        {
+          "page": 1,
+          "method": "PDF_TEXT",
+          "reason": "SEARCHABLE_TEXT",
+          "image_coverage": 0.0
+        },
+        {
+          "page": 2,
+          "method": "OCR",
+          "reason": "MAINLY_SCANNED",
+          "image_coverage": 0.9997
+        }
+      ],
+      "rows": 4,
+      "conflicting_headers_left_unknown": true,
+      "seconds": 8.194
+    }
+  ]
+}

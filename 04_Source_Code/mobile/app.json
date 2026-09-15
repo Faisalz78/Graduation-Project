@@ -1,0 +1,29 @@
+{
+  "expo": {
+    "name": "دقّق الفواتير",
+    "slug": "invoice-audit-mobile",
+    "version": "0.11.0",
+    "scheme": "invoice-audit",
+    "orientation": "portrait",
+    "icon": "./assets/icon.png",
+    "userInterfaceStyle": "light",
+    "ios": {
+      "supportsTablet": true,
+      "bundleIdentifier": "com.invoiceaudit.mobile"
+    },
+    "android": {
+      "package": "com.invoiceaudit.mobile",
+      "adaptiveIcon": {
+        "backgroundColor": "#E6F4FE",
+        "foregroundImage": "./assets/android-icon-foreground.png",
+        "backgroundImage": "./assets/android-icon-background.png",
+        "monochromeImage": "./assets/android-icon-monochrome.png"
+      },
+      "predictiveBackGestureEnabled": false
+    },
+    "web": {
+      "favicon": "./assets/favicon.png"
+    },
+    "plugins": ["expo-secure-store"]
+  }
+}

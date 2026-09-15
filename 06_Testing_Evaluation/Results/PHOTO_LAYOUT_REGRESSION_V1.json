@@ -1,0 +1,672 @@
+{
+  "benchmark_version": 1,
+  "parser_version": "labels-and-columns-v4",
+  "reader_versions": [
+    "pymupdf-paddle-hybrid-v5"
+  ],
+  "synthetic_only": true,
+  "not_real_world_accuracy": true,
+  "split_note": "Families 01/02 for development, 03 initially reserved but subsequently inspected; now a regression set. All are synthetic layouts from one generator, not independent supplier invoices.",
+  "comparison": "Strict field equality after Unicode/space/digit normalization; exact Decimal comparison for amounts. Items compared in printed order. Missing predictions and failures count as incorrect. OCR confidence is not calibrated field accuracy.",
+  "environment": {
+    "platform": "Windows-11-10.0.26200-SP0",
+    "python": "3.13.3",
+    "paddleocr": "3.7.0",
+    "paddlepaddle": "3.3.1",
+    "paddlex": "3.7.2",
+    "PyMuPDF": "1.28.2",
+    "pypdfium2": "5.13.0"
+  },
+  "groups": {
+    "all": {
+      "documents": 12,
+      "header_correct": 84,
+      "header_expected": 84,
+      "item_fields_correct": 119,
+      "item_fields_expected": 120,
+      "rows_expected": 24,
+      "rows_predicted": 24,
+      "rows_exact": 23,
+      "failures": 0,
+      "seconds": 64.38600000000001
+    },
+    "en": {
+      "documents": 6,
+      "header_correct": 42,
+      "header_expected": 42,
+      "item_fields_correct": 60,
+      "item_fields_expected": 60,
+      "rows_expected": 12,
+      "rows_predicted": 12,
+      "rows_exact": 12,
+      "failures": 0,
+      "seconds": 33.849000000000004
+    },
+    "digital_pdf": {
+      "documents": 6,
+      "header_correct": 42,
+      "header_expected": 42,
+      "item_fields_correct": 60,
+      "item_fields_expected": 60,
+      "rows_expected": 12,
+      "rows_predicted": 12,
+      "rows_exact": 12,
+      "failures": 0,
+      "seconds": 1.347
+    },
+    "development": {
+      "documents": 8,
+      "header_correct": 56,
+      "header_expected": 56,
+      "item_fields_correct": 80,
+      "item_fields_expected": 80,
+      "rows_expected": 16,
+      "rows_predicted": 16,
+      "rows_exact": 16,
+      "failures": 0,
+      "seconds": 38.501
+    },
+    "en/digital_pdf": {
+      "documents": 3,
+      "header_correct": 21,
+      "header_expected": 21,
+      "item_fields_correct": 30,
+      "item_fields_expected": 30,
+      "rows_expected": 6,
+      "rows_predicted": 6,
+      "rows_exact": 6,
+      "failures": 0,
+      "seconds": 0.786
+    },
+    "image": {
+      "documents": 6,
+      "header_correct": 42,
+      "header_expected": 42,
+      "item_fields_correct": 59,
+      "item_fields_expected": 60,
+      "rows_expected": 12,
+      "rows_predicted": 12,
+      "rows_exact": 11,
+      "failures": 0,
+      "seconds": 63.039
+    },
+    "en/image": {
+      "documents": 3,
+      "header_correct": 21,
+      "header_expected": 21,
+      "item_fields_correct": 30,
+      "item_fields_expected": 30,
+      "rows_expected": 6,
+      "rows_predicted": 6,
+      "rows_exact": 6,
+      "failures": 0,
+      "seconds": 33.063
+    },
+    "evaluation": {
+      "documents": 4,
+      "header_correct": 28,
+      "header_expected": 28,
+      "item_fields_correct": 39,
+      "item_fields_expected": 40,
+      "rows_expected": 8,
+      "rows_predicted": 8,
+      "rows_exact": 7,
+      "failures": 0,
+      "seconds": 25.885
+    },
+    "ar": {
+      "documents": 6,
+      "header_correct": 42,
+      "header_expected": 42,
+      "item_fields_correct": 59,
+      "item_fields_expected": 60,
+      "rows_expected": 12,
+      "rows_predicted": 12,
+      "rows_exact": 11,
+      "failures": 0,
+      "seconds": 30.537
+    },
+    "ar/digital_pdf": {
+      "documents": 3,
+      "header_correct": 21,
+      "header_expected": 21,
+      "item_fields_correct": 30,
+      "item_fields_expected": 30,
+      "rows_expected": 6,
+      "rows_predicted": 6,
+      "rows_exact": 6,
+      "failures": 0,
+      "seconds": 0.5609999999999999
+    },
+    "ar/image": {
+      "documents": 3,
+      "header_correct": 21,
+      "header_expected": 21,
+      "item_fields_correct": 29,
+      "item_fields_expected": 30,
+      "rows_expected": 6,
+      "rows_predicted": 6,
+      "rows_exact": 5,
+      "failures": 0,
+      "seconds": 29.976
+    }
+  },
+  "documents": [
+    {
+      "id": "en-01-digital",
+      "sha256": "9a8c4caf2530608a0c65df3362c0847e92cdedfc17e46cdd1183f9d79751caed",
+      "split": "development",
+      "reader_version": "pymupdf-paddle-hybrid-v5",
+      "header_checks": {
+        "supplier_name": true,
+        "invoice_number": true,
+        "invoice_date": true,
+        "currency": true,
+        "subtotal": true,
+        "tax_total": true,
+        "grand_total": true
+      },
+      "item_checks": [
+        {
+          "description": true,
+          "quantity": true,
+          "unit_price": true,
+          "discount_amount": true,
+          "tax_rate": true
+        },
+        {
+          "description": true,
+          "quantity": true,
+          "unit_price": true,
+          "discount_amount": true,
+          "tax_rate": true
+        }
+      ],
+      "documents": 1,
+      "header_correct": 7,
+      "header_expected": 7,
+      "item_fields_correct": 10,
+      "item_fields_expected": 10,
+      "rows_expected": 2,
+      "rows_predicted": 2,
+      "rows_exact": 2,
+      "failures": 0,
+      "seconds": 0.393,
+      "process_peak_rss_mb": 128.3,
+      "error": null
+    },
+    {
+      "id": "en-01-scan",
+      "sha256": "306e93f1c4476d75ac78d4e7b6e6d1ddd76a955cef4cb6c77da7891c039fe6b5",
+      "split": "development",
+      "reader_version": "pymupdf-paddle-hybrid-v5",
+      "header_checks": {
+        "supplier_name": true,
+        "invoice_number": true,
+        "invoice_date": true,
+        "currency": true,
+        "subtotal": true,
+        "tax_total": true,
+        "grand_total": true
+      },
+      "item_checks": [
+        {
+          "description": true,
+          "quantity": true,
+          "unit_price": true,
+          "discount_amount": true,
+          "tax_rate": true
+        },
+        {
+          "description": true,
+          "quantity": true,
+          "unit_price": true,
+          "discount_amount": true,
+          "tax_rate": true
+        }
+      ],
+      "documents": 1,
+      "header_correct": 7,
+      "header_expected": 7,
+      "item_fields_correct": 10,
+      "item_fields_expected": 10,
+      "rows_expected": 2,
+      "rows_predicted": 2,
+      "rows_exact": 2,
+      "failures": 0,
+      "seconds": 11.765,
+      "process_peak_rss_mb": 1255.4,
+      "error": null
+    },
+    {
+      "id": "en-02-digital",
+      "sha256": "67c8b4ae597dacdafa74baa586e331e4fe9ee77d312355dc45c33794242da3f1",
+      "split": "development",
+      "reader_version": "pymupdf-paddle-hybrid-v5",
+      "header_checks": {
+        "supplier_name": true,
+        "invoice_number": true,
+        "invoice_date": true,
+        "currency": true,
+        "subtotal": true,
+        "tax_total": true,
+        "grand_total": true
+      },
+      "item_checks": [
+        {
+          "description": true,
+          "quantity": true,
+          "unit_price": true,
+          "discount_amount": true,
+          "tax_rate": true
+        },
+        {
+          "description": true,
+          "quantity": true,
+          "unit_price": true,
+          "discount_amount": true,
+          "tax_rate": true
+        }
+      ],
+      "documents": 1,
+      "header_correct": 7,
+      "header_expected": 7,
+      "item_fields_correct": 10,
+      "item_fields_expected": 10,
+      "rows_expected": 2,
+      "rows_predicted": 2,
+      "rows_exact": 2,
+      "failures": 0,
+      "seconds": 0.215,
+      "process_peak_rss_mb": 1255.4,
+      "error": null
+    },
+    {
+      "id": "en-02-scan",
+      "sha256": "51616e3c3432dcdad3ba927f1df4bf8f4092cbee3618a6f79182058fb62be17c",
+      "split": "development",
+      "reader_version": "pymupdf-paddle-hybrid-v5",
+      "header_checks": {
+        "supplier_name": true,
+        "invoice_number": true,
+        "invoice_date": true,
+        "currency": true,
+        "subtotal": true,
+        "tax_total": true,
+        "grand_total": true
+      },
+      "item_checks": [
+        {
+          "description": true,
+          "quantity": true,
+          "unit_price": true,
+          "discount_amount": true,
+          "tax_rate": true
+        },
+        {
+          "description": true,
+          "quantity": true,
+          "unit_price": true,
+          "discount_amount": true,
+          "tax_rate": true
+        }
+      ],
+      "documents": 1,
+      "header_correct": 7,
+      "header_expected": 7,
+      "item_fields_correct": 10,
+      "item_fields_expected": 10,
+      "rows_expected": 2,
+      "rows_predicted": 2,
+      "rows_exact": 2,
+      "failures": 0,
+      "seconds": 8.328,
+      "process_peak_rss_mb": 1282.9,
+      "error": null
+    },
+    {
+      "id": "en-03-digital",
+      "sha256": "7791c1ac47df55c284d8838766f5d98c5c1d2d826d5bee12f017679016fee491",
+      "split": "evaluation",
+      "reader_version": "pymupdf-paddle-hybrid-v5",
+      "header_checks": {
+        "supplier_name": true,
+        "invoice_number": true,
+        "invoice_date": true,
+        "currency": true,
+        "subtotal": true,
+        "tax_total": true,
+        "grand_total": true
+      },
+      "item_checks": [
+        {
+          "description": true,
+          "quantity": true,
+          "unit_price": true,
+          "discount_amount": true,
+          "tax_rate": true
+        },
+        {
+          "description": true,
+          "quantity": true,
+          "unit_price": true,
+          "discount_amount": true,
+          "tax_rate": true
+        }
+      ],
+      "documents": 1,
+      "header_correct": 7,
+      "header_expected": 7,
+      "item_fields_correct": 10,
+      "item_fields_expected": 10,
+      "rows_expected": 2,
+      "rows_predicted": 2,
+      "rows_exact": 2,
+      "failures": 0,
+      "seconds": 0.178,
+      "process_peak_rss_mb": 1282.9,
+      "error": null
+    },
+    {
+      "id": "en-03-scan",
+      "sha256": "1b24526c03b76adb5ad0cb65e833a0b55345874d39200c31fde5bf49c5635ff9",
+      "split": "evaluation",
+      "reader_version": "pymupdf-paddle-hybrid-v5",
+      "header_checks": {
+        "supplier_name": true,
+        "invoice_number": true,
+        "invoice_date": true,
+        "currency": true,
+        "subtotal": true,
+        "tax_total": true,
+        "grand_total": true
+      },
+      "item_checks": [
+        {
+          "description": true,
+          "quantity": true,
+          "unit_price": true,
+          "discount_amount": true,
+          "tax_rate": true
+        },
+        {
+          "description": true,
+          "quantity": true,
+          "unit_price": true,
+          "discount_amount": true,
+          "tax_rate": true
+        }
+      ],
+      "documents": 1,
+      "header_correct": 7,
+      "header_expected": 7,
+      "item_fields_correct": 10,
+      "item_fields_expected": 10,
+      "rows_expected": 2,
+      "rows_predicted": 2,
+      "rows_exact": 2,
+      "failures": 0,
+      "seconds": 12.97,
+      "process_peak_rss_mb": 2527.0,
+      "error": null
+    },
+    {
+      "id": "ar-01-digital",
+      "sha256": "65d467a6dcd05d9d59e60d72e7e91401b3748fda804ee96af5bb79bd43986051",
+      "split": "development",
+      "reader_version": "pymupdf-paddle-hybrid-v5",
+      "header_checks": {
+        "supplier_name": true,
+        "invoice_number": true,
+        "invoice_date": true,
+        "currency": true,
+        "subtotal": true,
+        "tax_total": true,
+        "grand_total": true
+      },
+      "item_checks": [
+        {
+          "description": true,
+          "quantity": true,
+          "unit_price": true,
+          "discount_amount": true,
+          "tax_rate": true
+        },
+        {
+          "description": true,
+          "quantity": true,
+          "unit_price": true,
+          "discount_amount": true,
+          "tax_rate": true
+        }
+      ],
+      "documents": 1,
+      "header_correct": 7,
+      "header_expected": 7,
+      "item_fields_correct": 10,
+      "item_fields_expected": 10,
+      "rows_expected": 2,
+      "rows_predicted": 2,
+      "rows_exact": 2,
+      "failures": 0,
+      "seconds": 0.194,
+      "process_peak_rss_mb": 2527.0,
+      "error": null
+    },
+    {
+      "id": "ar-01-scan",
+      "sha256": "ad815b0c67299f344cb908f8728be80d4a33d12d7b1d6bf802fc573151f80321",
+      "split": "development",
+      "reader_version": "pymupdf-paddle-hybrid-v5",
+      "header_checks": {
+        "supplier_name": true,
+        "invoice_number": true,
+        "invoice_date": true,
+        "currency": true,
+        "subtotal": true,
+        "tax_total": true,
+        "grand_total": true
+      },
+      "item_checks": [
+        {
+          "description": true,
+          "quantity": true,
+          "unit_price": true,
+          "discount_amount": true,
+          "tax_rate": true
+        },
+        {
+          "description": true,
+          "quantity": true,
+          "unit_price": true,
+          "discount_amount": true,
+          "tax_rate": true
+        }
+      ],
+      "documents": 1,
+      "header_correct": 7,
+      "header_expected": 7,
+      "item_fields_correct": 10,
+      "item_fields_expected": 10,
+      "rows_expected": 2,
+      "rows_predicted": 2,
+      "rows_exact": 2,
+      "failures": 0,
+      "seconds": 9.42,
+      "process_peak_rss_mb": 2527.0,
+      "error": null
+    },
+    {
+      "id": "ar-02-digital",
+      "sha256": "050a8613cb37e6f3521486a50a08538da2edfdd2b7d59141effcfa5bb47c8dad",
+      "split": "development",
+      "reader_version": "pymupdf-paddle-hybrid-v5",
+      "header_checks": {
+        "supplier_name": true,
+        "invoice_number": true,
+        "invoice_date": true,
+        "currency": true,
+        "subtotal": true,
+        "tax_total": true,
+        "grand_total": true
+      },
+      "item_checks": [
+        {
+          "description": true,
+          "quantity": true,
+          "unit_price": true,
+          "discount_amount": true,
+          "tax_rate": true
+        },
+        {
+          "description": true,
+          "quantity": true,
+          "unit_price": true,
+          "discount_amount": true,
+          "tax_rate": true
+        }
+      ],
+      "documents": 1,
+      "header_correct": 7,
+      "header_expected": 7,
+      "item_fields_correct": 10,
+      "item_fields_expected": 10,
+      "rows_expected": 2,
+      "rows_predicted": 2,
+      "rows_exact": 2,
+      "failures": 0,
+      "seconds": 0.182,
+      "process_peak_rss_mb": 2527.0,
+      "error": null
+    },
+    {
+      "id": "ar-02-scan",
+      "sha256": "6fee6dda0c6af0ad7e8ee50d6568b8fe47cf5dc1a229f3fb485622112d5f2b23",
+      "split": "development",
+      "reader_version": "pymupdf-paddle-hybrid-v5",
+      "header_checks": {
+        "supplier_name": true,
+        "invoice_number": true,
+        "invoice_date": true,
+        "currency": true,
+        "subtotal": true,
+        "tax_total": true,
+        "grand_total": true
+      },
+      "item_checks": [
+        {
+          "description": true,
+          "quantity": true,
+          "unit_price": true,
+          "discount_amount": true,
+          "tax_rate": true
+        },
+        {
+          "description": true,
+          "quantity": true,
+          "unit_price": true,
+          "discount_amount": true,
+          "tax_rate": true
+        }
+      ],
+      "documents": 1,
+      "header_correct": 7,
+      "header_expected": 7,
+      "item_fields_correct": 10,
+      "item_fields_expected": 10,
+      "rows_expected": 2,
+      "rows_predicted": 2,
+      "rows_exact": 2,
+      "failures": 0,
+      "seconds": 8.004,
+      "process_peak_rss_mb": 2527.0,
+      "error": null
+    },
+    {
+      "id": "ar-03-digital",
+      "sha256": "588e9cac97db6e9fe1536d4976ec1c103b37a444a89d14d69b4a1b4c367b00ec",
+      "split": "evaluation",
+      "reader_version": "pymupdf-paddle-hybrid-v5",
+      "header_checks": {
+        "supplier_name": true,
+        "invoice_number": true,
+        "invoice_date": true,
+        "currency": true,
+        "subtotal": true,
+        "tax_total": true,
+        "grand_total": true
+      },
+      "item_checks": [
+        {
+          "description": true,
+          "quantity": true,
+          "unit_price": true,
+          "discount_amount": true,
+          "tax_rate": true
+        },
+        {
+          "description": true,
+          "quantity": true,
+          "unit_price": true,
+          "discount_amount": true,
+          "tax_rate": true
+        }
+      ],
+      "documents": 1,
+      "header_correct": 7,
+      "header_expected": 7,
+      "item_fields_correct": 10,
+      "item_fields_expected": 10,
+      "rows_expected": 2,
+      "rows_predicted": 2,
+      "rows_exact": 2,
+      "failures": 0,
+      "seconds": 0.185,
+      "process_peak_rss_mb": 2527.0,
+      "error": null
+    },
+    {
+      "id": "ar-03-scan",
+      "sha256": "ed265a8b83cec248969f908ccc234d670a65c4b977647270cc494ef50c0941e1",
+      "split": "evaluation",
+      "reader_version": "pymupdf-paddle-hybrid-v5",
+      "header_checks": {
+        "supplier_name": true,
+        "invoice_number": true,
+        "invoice_date": true,
+        "currency": true,
+        "subtotal": true,
+        "tax_total": true,
+        "grand_total": true
+      },
+      "item_checks": [
+        {
+          "description": false,
+          "quantity": true,
+          "unit_price": true,
+          "discount_amount": true,
+          "tax_rate": true
+        },
+        {
+          "description": true,
+          "quantity": true,
+          "unit_price": true,
+          "discount_amount": true,
+          "tax_rate": true
+        }
+      ],
+      "documents": 1,
+      "header_correct": 7,
+      "header_expected": 7,
+      "item_fields_correct": 9,
+      "item_fields_expected": 10,
+      "rows_expected": 2,
+      "rows_predicted": 2,
+      "rows_exact": 1,
+      "failures": 0,
+      "seconds": 12.552,
+      "process_peak_rss_mb": 2690.0,
+      "error": null
+    }
+  ]
+}

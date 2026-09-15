@@ -1,0 +1,23 @@
+{
+  "model": "qwen3-vl:8b-instruct",
+  "digest": "0533d74300e4f9bc367d675d4e64ffd073d50ff16a2b4096cc2e8a1cf8c96319",
+  "size_bytes": 6140415975,
+  "details": {
+    "parent_model": "",
+    "format": "gguf",
+    "family": "qwen3vl",
+    "families": [
+      "qwen3vl"
+    ],
+    "parameter_size": "8.8B",
+    "quantization_level": "Q4_K_M",
+    "context_length": 262144,
+    "embedding_length": 4096
+  },
+  "tested_ollama_version": "0.34.0",
+  "context_tokens": 12288,
+  "maximum_output_tokens": 2400,
+  "temperature": 0,
+  "seed": 42,
+  "tested_date": "2026-09-14"
+}
