@@ -29,7 +29,7 @@ idna==3.19
 imagesize==2.0.1
 modelscope==1.40.0
 modelscope-hub==0.4.2
-multidict==6.8.0
+multidict==6.9.1
 networkx==3.6.1
 numpy==2.3.5
 opencv-contrib-python==4.10.0.84
